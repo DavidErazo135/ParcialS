@@ -1,76 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"
-	>
-	<title>zoologico</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maquina expendedora</title>
+	<link rel="icon" type="image/x-icon" href="img/icon_pag.png">
+	<link rel="stylesheet" href="Diseño.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+	integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min,js"></script>
+	<!--<script type="text/javascript">
+		alert("Un mensaje de prueba");
+	</script>-->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="MDB/css/mdb.min.css">
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-  />
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
-  />
-  <!-- MDB -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
-    rel="stylesheet"
+	<style>
+		body {
+			background-image: url(img/font.jpg);
+			background-size: cover;
+		}
+	</style>
 
-      <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script type="text/javascript" src="MDB/js/mdb.min.js"></script>
-  <script type="text/javascript" src="js/copia.js"></script>
-  
-  <link rel="stylesheet" type="text/css" href="css/zoologico.css">
+	<div class="container text-light">
+		<div class="row">
+			<div class="col-3">
+				<br>
+				<h6 >UNIVERSIDAD DE NARIÑO EXTENSION IPIALES.</h6>
+				<h6 >DESARROLLADO POR DAVID ERAZO</h6>
+			</div>
+			<div class="col-3 ">
+				<img "heigth="100" width="100"src="img\udenar.png" alt="No hay imagen" >
+			</div>
+		</div>
+	</div><br><br>
 </head>
+
 <body>
-<br><br>
-<div class="container" id="principal">
- <br><br><br>
- <div class="form-outline">
-             <label for="validationCustom01" class="form-label">Id
-             </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" id="nombre" name="nombre">
-           
-          
-        </div>
-         <div class="form-outline">
-             <label for="validationCustom01" class="form-label">Nombre
-             </label>
-            <input type="text" id="nombre" name="nombre">
-           
-           
-          
-        </div>
-         <div class="form-outline">
-             <label for="validationCustom01" class="form-label">Precio
-             </label>&nbsp;&nbsp;&nbsp;
-            <input type="text" id="nombre" name="nombre">
-           
-           
-          
-        </div>
 
- <div align="center" class="container" id="container1">
-        
-        <br><br><br><br><br><br><br>
-        <button type="button" class="btn btn-primary">Opcion1</button>&nbsp;
-        <button type="button" class="btn btn-primary">opcion2</button>&nbsp;
-        <button type="button" class="btn btn-primary">opcion3</button>
-<br><br>
-</div>
+	<div id="contenedorp" class="container"><!--inicio contenedor principal-->
+		<h1 >Máquina Dispensadora</h1>
+		<div class="grid_cards">
+			<div class="row row-cols-1 row-cols-md-4 ">
+		<!-----------------------------------------inicio seccion Papa Margarita-->
 
-        <br>
-   
-   <fieldset id="perfil">
-    <img  src="https://st4.depositphotos.com/1526816/21231/v/450/depositphotos_212317360-stock-illustration-wild-animals-zoo-illustration.jpg" width="400px" height="250px">
-</fieldset>
-  
-</div>
 
+
+				<div id="contenedor1" class="container"  >
+					<div class="card border-info" style="width: 19rem;">
+						<img src="img/margarita.png" class="card-img-top" alt="...">
+						<div id="contenedor1-1"class="card-body">
+							<h5 class="card-title" id="papasm"><b>Papa Margarita</b></h5>
+							<p class="card-text" id="disponPapas">Disponibles: 0</p>
+							<p class="card-text">Precio: $ 1.700</p>
+							
+							<a href="#" class="btn btn-primary" name="compPapa" id="compPapa" onclick="comprar_papas()">Comprar</a>
+							<a href="#" class="btn btn-secondary" name="abasPapa" id="abasPapa" onclick="abastecer_papas()">Abastecer</a>
+						</div>
+					</div>
+				</div>
+
+
+
+
+		<!-----------------------------------------inicio seccion Jugo Hit-->
+				<div id="contenedor2" class="container">
+					<div class="card border-info" style="width: 19rem;">
+						<img src="img/hit.png" class="card-img-top" alt="...">
+						<div id="contenedor2-1" class="card-body">
+							<h5 class="card-title"><b>Jugo Hit</b></h5>
+							<p class="card-text">
+								Disponibles: <br> 
+								Precio: $ 2.400
+							</p>
+							<a href="#" class="btn btn-primary" name="compHit" id="compHit" onclick="comprar_hit()">Comprar</a>
+							<a href="#" class="btn btn-secondary" name="abasHit" id="abasHit" onclick="abastecer_hit()">Abastecer</a>
+						</div>
+					</div>
+				</div>
+		<!-----------------------------------------inicio seccion Chocolatina Jet-->
+				<div id="contenedor3" class="container">
+					<div class="card border-info" style="width: 19rem;">
+						<img src="img/jet.png" class="card-img-top" alt="...">
+						<div id="contenedor3-1" class="card-body">
+							<h5 class="card-title"><b>Chocolatina Jet</b></h5>
+							<p class="card-text">
+								Disponibles: <br> 
+								Precio: $ 700
+							</p>
+							<a href="#" class="btn btn-primary" name="compChocol" id="compChocol" onclick="comprar_chocolates()">Comprar</a>
+							<a href="#" class="btn btn-secondary" name="abasChocol" id="abasChocol" onclick="abastecer_chocolates()"> Abastecer</a>
+						</div>
+					</div>
+				</div>
+		<!-----------------------------------------inicio seccion Galletas-->
+				<div id="contenedor4" class="container">
+					<div class="card border-info" style="width: 19rem;">
+						<img src="img/galleta.png" class="card-img-top" alt="...">
+						<div id="contenedor4-1" class="card-body">
+							<h5 class="card-title"><b>Galletas</b></h5>
+							<p class="card-text">
+								Disponibles: <br> 
+								Precio: $ 800
+							</p>
+							<a href="#" class="btn btn-primary" name="compGall" id="compGall" onclick="comprar_galletas()">Comprar</a>
+							<a href="#" class="btn btn-secondary" name="abasGall" id="abasGall" onclick="abastecer_galletas()">Abastecer</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<br>
+				<div class="container"> <!--Inicio botones-->
+					<button type="button" class="btn btn-danger" name="cantVentas" id="cantVentas" onclick="cantidad_de_ventas()">
+						Cantidad de Ventas
+					</button>
+					<button type="button" class="btn btn-warning" name="valVentas" id="valVentas" onclick="valor_total_ventas()">Valor total de Ventas</button>
+					<button type="button" class="btn btn-warning" name="unidVendidas" id="unidVendidas" onclick="unidades_vendidas()">Unidades vendidas</button>
+				</div> <!--Fin botones-->
+				<br>
+ 	</div> <!-- fin contenedor principal-->
+ 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div>
+ 		<div class="footer">
+			<div class="container-fluid bg-primary text-center p-3 text-light">
+				<p class="small">&copy; Todos los derechos reservados. Bienestar digital</p>
+				<p class="small"> 2022</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/functions.js"></script>
 </body>
 </html>
